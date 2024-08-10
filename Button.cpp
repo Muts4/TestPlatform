@@ -20,6 +20,9 @@ void MyButton::paintEvent(QPaintEvent *event)
     {
         option.state |= QStyle::State_Sunken;
     }
+    else {
+        option.state |= QStyle::State_Raised;
+    }
 
     style()->drawControl(QStyle::CE_PushButton, &option, &painter, this);
 
