@@ -2,6 +2,8 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <vector>
+#include <string>
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -20,6 +22,9 @@ public:
 private slots:
     void handleButtonClick1();
     void handleButtonClick2();
+    void openCSVFileDialog();
+    void readCSVFile(const QString &fileName);
+    void displayCSVData(const std::vector<std::vector<std::string>> &data);
 
 private:
     Ui::MainWindow *ui;
